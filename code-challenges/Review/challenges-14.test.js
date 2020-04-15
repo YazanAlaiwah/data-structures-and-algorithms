@@ -92,7 +92,7 @@ let biggerThanLuke = (arr) => {
   });
   return arr
     .reduce((a, b) => {
-      Number(b.mass) >= Number(mass) ? a.push(b.name) : a;
+      Number(b.mass) > Number(mass) ? a.push(b.name) : a;
       return a;
     }, [])
     .join(' - ');
@@ -148,7 +148,7 @@ Here is a sample board:
 ];
 ------------------------------------------------------------------------------------------------ */
 function helpCheck(item1, item2, item3) {
-  if (item1 === item2 && item2 === item3) return true;
+  if (item1 === item2 && item2 === item3 && item1 !==''&&item2!=='') return true;
   return false;
 }
 
