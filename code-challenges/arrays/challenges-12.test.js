@@ -174,6 +174,7 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) =>
   Math.min(...weather.map((a) => a.reduce((a, b) => a + b, 0) / a.length));
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
 
